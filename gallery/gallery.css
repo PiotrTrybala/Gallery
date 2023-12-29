@@ -1,0 +1,158 @@
+:root {
+    /*
+
+    --gallery-thumbnail-type: specifies how large thumbnail in gallery component should be
+
+    Sizes:
+        1 - large: three per row
+        2 - medium: six per row
+        3 - small: nine per row
+
+    */
+    --gallery-thumbnail-type: 2;
+
+    --gallery-thumbnail-item-spacing: 8px;
+
+    --gallery-thumbnail-item-height: 270px;
+    --gallery-thumbnail-item-width: 480px;
+}
+
+.gallery-thumbnail-large {
+    --gallery-thumbnail-type: 1;
+}
+
+.gallery-thumbnail-medium {
+    --gallery-thumbnail-type: 2;
+}
+
+.gallery-thumbnail-small {
+    --gallery-thumbnail-type: 3;
+}
+
+.transition-fast {
+    transition-duration: 200ms;
+}
+
+.transition-normal {
+    transition-duration: 500ms;
+}
+
+.transition-slow {
+    transition-duration: 1000ms;
+}
+
+.item-border {
+    border: 1px solid black;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: calc(100% / (3 * var(--gallery-thumbnail-type)));
+    height: var(--gallery-thumbnail-item-height);
+    padding: var(--gallery-thumbnail-item-spacing);
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1440px) {
+    .gallery-item {
+        --gallery-thumbnail-type: 1;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .gallery {
+        justify-content: center;
+    }
+
+    .gallery-item {
+        --gallery-thumbnail-type: 0.75;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery-item {
+        --gallery-thumbnail-type: 0;
+    }
+}
+
+.gallery-overlay {
+    background-color: rgba(0, 0, 0, 0.495);
+    position: fixed;
+    z-index: 10000;
+    height: 100vh;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    display: none;
+    flex-direction: column;
+}
+
+.gallery-overlay-preview {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+}
+
+.gallery-overlay-preview img {
+    scale: .75;
+}
+
+.gallery-overlay-controls {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-overlay-control {
+    width: 96px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+.gallery-overlay-control svg {
+    height: 100%;
+    width: 100%;
+    scale: 0.5;
+}
+
+.gallery-overlay-close-button {
+    width: 96px;
+    height: 96px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.gallery-overlay-close-button svg {
+    width: 100%;
+    height: 100%;
+    scale: 0.5;
+}
+
+@media only screen and (max-width: 1024px) {
+
+}

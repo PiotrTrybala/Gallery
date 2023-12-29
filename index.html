@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="gallery/gallery.css" rel="stylesheet">
+    <script src="gallery/gallery.js" defer></script>
+</head>
+
+<body>
+
+    <div class="gallery-overlay">
+        <div class="gallery-overlay-close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+        </div>
+
+
+        <div class="gallery-overlay-preview">
+            <img src="./assets/images/pic1.jpg" alt="...">
+        </div>
+
+        <div class="gallery-overlay-controls">
+            <div class="gallery-overlay-control-prev gallery-overlay-control">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                    <path fill-rule="evenodd"
+                        d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+            </div>
+
+            <div class="gallery-overlay-control-next gallery-overlay-control">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                    <path fill-rule="evenodd"
+                        d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="gallery gallery-thumbnail-medium">
+
+            <div class="gallery-item transition-normal" data-gid="1">
+                <img src="assets/images/pic1.jpg">
+            </div>
+            <div class="gallery-item transition-normal" data-gid="2">
+                <img src="assets/images/pic2.jpg">
+            </div>
+            <div class="gallery-item transition-normal" data-gid="3">
+                <img src="assets/images/pic3.jpg">
+            </div>
+            <div class="gallery-item transition-normal" data-gid="4">
+                <img src="assets/images/pic4.jpg">
+            </div>
+            <div class="gallery-item transition-normal" data-gid="5">
+                <img src="assets/images/pic5.jpg">
+            </div>
+            <div class="gallery-item transition-normal" data-gid="6">
+                <img src="assets/images/pic6.jpg">
+            </div>
+            <div class="gallery-item transition-normal" data-gid="7">
+                <img src="assets/images/pic7.jpg">
+            </div>
+            <div class="gallery-item transition-normal" data-gid="8">
+                <img src="assets/images/pic8.jpg">
+            </div>
+            <div class="gallery-item transition-normal" data-gid="9">
+                <img src="assets/images/pic9.jpg">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
